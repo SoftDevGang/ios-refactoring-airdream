@@ -1,24 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="57B-ah-WBL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Trip Type View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TripTypeViewController" id="BYZ-38-t0r" customClass="TripTypeViewController" customModule="airdream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lo-1M-94c">
+                                <rect key="frame" x="226" y="350" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your travel type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEy-6d-qFO">
+                                <rect key="frame" x="101.5" y="96" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-MK-era">
+                                <rect key="frame" x="100" y="355" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBp-Ei-PBu">
+                                <rect key="frame" x="171.5" y="573" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahT-pQ-M5w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qEy-6d-qFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5WC-cz-VrB"/>
+                            <constraint firstItem="5V1-MK-era" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="JYz-iw-3Jd"/>
+                            <constraint firstItem="8lo-1M-94c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5V1-MK-era" secondAttribute="trailing" constant="10" id="Jtz-B3-aUe"/>
+                            <constraint firstItem="8lo-1M-94c" firstAttribute="centerY" secondItem="5V1-MK-era" secondAttribute="centerY" id="ZDB-O7-7DA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cBp-Ei-PBu" secondAttribute="bottom" constant="64" id="fOZ-bp-zDu"/>
+                            <constraint firstItem="cBp-Ei-PBu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gbY-uy-m7l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8lo-1M-94c" secondAttribute="trailing" constant="100" id="i09-VG-Uys"/>
+                            <constraint firstItem="5V1-MK-era" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="s09-PD-sfJ"/>
+                            <constraint firstItem="qEy-6d-qFO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="w9v-gU-mxa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4O1-HC-ZLx"/>
+                    <connections>
+                        <outlet property="tripType" destination="8lo-1M-94c" id="czg-it-y8J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="650" y="-540"/>
+        </scene>
+        <!--Departure City View Controller-->
+        <scene sceneID="IZs-fA-dp6">
+            <objects>
+                <viewController storyboardIdentifier="DepartureCityViewController" id="JLy-fY-DBX" customClass="DepartureCityViewController" customModule="airdream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qB8-ad-L7v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your departure city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoH-ij-UEu">
+                                <rect key="frame" x="88.5" y="52" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xAK-tt-OC5">
+                                <rect key="frame" x="100" y="328.5" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="address-level2"/>
+                                <connections>
+                                    <action selector="onCityEntered:" destination="cud-42-v4q" eventType="primaryActionTriggered" id="3ep-cP-800"/>
+                                    <action selector="onDoneEditing:" destination="JLy-fY-DBX" eventType="primaryActionTriggered" id="7ff-Ac-E3W"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-3e-5Nh">
+                                <rect key="frame" x="171.5" y="573" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="JLy-fY-DBX" eventType="touchUpInside" id="Cok-lK-FIR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xAK-tt-OC5" firstAttribute="centerY" secondItem="abl-yG-1K6" secondAttribute="centerY" id="4QG-9G-OZv"/>
+                            <constraint firstItem="fxP-3e-5Nh" firstAttribute="centerX" secondItem="abl-yG-1K6" secondAttribute="centerX" id="5Cb-4s-V8V"/>
+                            <constraint firstItem="WoH-ij-UEu" firstAttribute="top" secondItem="abl-yG-1K6" secondAttribute="top" constant="32" id="Dm2-3f-BTY"/>
+                            <constraint firstItem="abl-yG-1K6" firstAttribute="bottom" secondItem="fxP-3e-5Nh" secondAttribute="bottom" constant="64" id="GRR-VO-mFs"/>
+                            <constraint firstItem="xAK-tt-OC5" firstAttribute="leading" secondItem="abl-yG-1K6" secondAttribute="leading" constant="100" id="IaS-OU-58I"/>
+                            <constraint firstItem="xAK-tt-OC5" firstAttribute="centerX" secondItem="abl-yG-1K6" secondAttribute="centerX" id="Yie-d8-rha"/>
+                            <constraint firstItem="WoH-ij-UEu" firstAttribute="centerX" secondItem="abl-yG-1K6" secondAttribute="centerX" id="dkp-ZE-pDz"/>
+                            <constraint firstItem="abl-yG-1K6" firstAttribute="trailing" secondItem="xAK-tt-OC5" secondAttribute="trailing" constant="100" id="vsg-Sf-Bjd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="abl-yG-1K6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CIy-im-Xui"/>
+                    <connections>
+                        <outlet property="departureCity" destination="xAK-tt-OC5" id="fk3-EN-u8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44c-3X-PZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cud-42-v4q" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="-540"/>
+        </scene>
+        <!--Arrival City View Controller-->
+        <scene sceneID="TZI-rC-CFx">
+            <objects>
+                <viewController storyboardIdentifier="ArrivalCityViewController" id="Bpn-5n-MvZ" customClass="ArrivalCityViewController" customModule="airdream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TXx-nf-62R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your arrival city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-el-nOl">
+                                <rect key="frame" x="102.5" y="52" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zs-XX-spJ">
+                                <rect key="frame" x="171.5" y="573" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNext:" destination="Bpn-5n-MvZ" eventType="touchUpInside" id="2DY-bK-9Jg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXH-BL-NEW">
+                                <rect key="frame" x="100" y="328.5" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="address-level2"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U9u-el-nOl" firstAttribute="centerX" secondItem="ERl-ae-brS" secondAttribute="centerX" id="CsM-Lh-bFH"/>
+                            <constraint firstItem="ERl-ae-brS" firstAttribute="bottom" secondItem="8zs-XX-spJ" secondAttribute="bottom" constant="64" id="M1L-x4-t3K"/>
+                            <constraint firstItem="ZXH-BL-NEW" firstAttribute="centerY" secondItem="ERl-ae-brS" secondAttribute="centerY" id="Ps0-6c-XjO"/>
+                            <constraint firstItem="U9u-el-nOl" firstAttribute="top" secondItem="ERl-ae-brS" secondAttribute="top" constant="32" id="Rhr-jF-qTI"/>
+                            <constraint firstItem="ERl-ae-brS" firstAttribute="trailing" secondItem="ZXH-BL-NEW" secondAttribute="trailing" constant="100" id="bTT-NC-lf0"/>
+                            <constraint firstItem="ZXH-BL-NEW" firstAttribute="leading" secondItem="ERl-ae-brS" secondAttribute="leading" constant="100" id="feR-R5-DOT"/>
+                            <constraint firstItem="8zs-XX-spJ" firstAttribute="centerX" secondItem="ERl-ae-brS" secondAttribute="centerX" id="vNj-CH-VsQ"/>
+                            <constraint firstItem="ZXH-BL-NEW" firstAttribute="centerX" secondItem="ERl-ae-brS" secondAttribute="centerX" id="xwG-cN-SOz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ERl-ae-brS"/>
+                    </view>
+                    <connections>
+                        <outlet property="arrivalCity" destination="ZXH-BL-NEW" id="cJe-aq-cm3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plx-3Q-dUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="-540"/>
+        </scene>
+        <!--Booking Confirmation View Controller-->
+        <scene sceneID="hl7-mL-ety">
+            <objects>
+                <viewController storyboardIdentifier="BookingConfirmationViewController" id="afg-Pr-ZwR" customClass="BookingConfirmationViewController" customModule="airdream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wxe-lt-Kx8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your booking informations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTa-WU-yi5">
+                                <rect key="frame" x="87" y="52" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-1L-bNa">
+                                <rect key="frame" x="160" y="573" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="onConfirm:" destination="mX7-Lf-wQ8" eventType="touchUpInside" id="st9-5m-33V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outward trip from city to city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-Lq-4ye">
+                                <rect key="frame" x="77.5" y="333" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wpa-Lq-4ye" firstAttribute="centerY" secondItem="JQe-PG-j6V" secondAttribute="centerY" id="2va-iR-4L0"/>
+                            <constraint firstItem="JQe-PG-j6V" firstAttribute="bottom" secondItem="dR2-1L-bNa" secondAttribute="bottom" constant="64" id="Blm-6D-V7N"/>
+                            <constraint firstItem="HTa-WU-yi5" firstAttribute="top" secondItem="JQe-PG-j6V" secondAttribute="top" constant="32" id="HED-FC-ZvS"/>
+                            <constraint firstItem="wpa-Lq-4ye" firstAttribute="centerX" secondItem="JQe-PG-j6V" secondAttribute="centerX" id="Qpg-6b-wcd"/>
+                            <constraint firstItem="dR2-1L-bNa" firstAttribute="centerX" secondItem="JQe-PG-j6V" secondAttribute="centerX" id="eZI-eR-o5j"/>
+                            <constraint firstItem="HTa-WU-yi5" firstAttribute="centerX" secondItem="JQe-PG-j6V" secondAttribute="centerX" id="rzA-eq-LqJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JQe-PG-j6V"/>
+                    </view>
+                    <connections>
+                        <outlet property="summary" destination="wpa-Lq-4ye" id="n7A-sU-PEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bu8-z8-L9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mX7-Lf-wQ8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2876" y="-540"/>
+        </scene>
+        <!--Booking Wizard Navigation View Controller-->
+        <scene sceneID="3Mx-sQ-6WL">
+            <objects>
+                <navigationController id="57B-ah-WBL" customClass="BookingWizardNavigationViewController" customModule="airdream" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q7X-Nq-I6Y">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="G1K-Od-bYq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIE-NU-STE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="-540"/>
         </scene>
     </scenes>
 </document>
