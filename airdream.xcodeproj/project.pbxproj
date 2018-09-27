@@ -16,8 +16,6 @@
 		0B940993215BD59C005A6BD2 /* airdreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B940992215BD59C005A6BD2 /* airdreamUITests.swift */; };
 		0B9409A1215BDBD4005A6BD2 /* BookingWizardNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9409A0215BDBD4005A6BD2 /* BookingWizardNavigationViewController.swift */; };
 		0B9409A3215BDC17005A6BD2 /* TripTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9409A2215BDC17005A6BD2 /* TripTypeViewController.swift */; };
-		0B9409A5215BDC4F005A6BD2 /* DepartureCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9409A4215BDC4F005A6BD2 /* DepartureCityViewController.swift */; };
-		0B9409A7215BDF23005A6BD2 /* ArrivalCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9409A6215BDF23005A6BD2 /* ArrivalCityViewController.swift */; };
 		0B9409A9215BE0EA005A6BD2 /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9409A8215BE0EA005A6BD2 /* BookingConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +52,6 @@
 		0B940994215BD59C005A6BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B9409A0215BDBD4005A6BD2 /* BookingWizardNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingWizardNavigationViewController.swift; sourceTree = "<group>"; };
 		0B9409A2215BDC17005A6BD2 /* TripTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTypeViewController.swift; sourceTree = "<group>"; };
-		0B9409A4215BDC4F005A6BD2 /* DepartureCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureCityViewController.swift; sourceTree = "<group>"; };
-		0B9409A6215BDF23005A6BD2 /* ArrivalCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalCityViewController.swift; sourceTree = "<group>"; };
 		0B9409A8215BE0EA005A6BD2 /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,8 +112,6 @@
 				0B94097E215BD59C005A6BD2 /* Info.plist */,
 				0B9409A0215BDBD4005A6BD2 /* BookingWizardNavigationViewController.swift */,
 				0B9409A2215BDC17005A6BD2 /* TripTypeViewController.swift */,
-				0B9409A4215BDC4F005A6BD2 /* DepartureCityViewController.swift */,
-				0B9409A6215BDF23005A6BD2 /* ArrivalCityViewController.swift */,
 			);
 			path = airdream;
 			sourceTree = "<group>";
@@ -272,12 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B940975215BD599005A6BD2 /* ViewController.swift in Sources */,
-				0B9409A5215BDC4F005A6BD2 /* DepartureCityViewController.swift in Sources */,
 				0B9409A1215BDBD4005A6BD2 /* BookingWizardNavigationViewController.swift in Sources */,
 				0B940973215BD599005A6BD2 /* AppDelegate.swift in Sources */,
 				0B9409A3215BDC17005A6BD2 /* TripTypeViewController.swift in Sources */,
 				0B9409A9215BE0EA005A6BD2 /* BookingConfirmationViewController.swift in Sources */,
-				0B9409A7215BDF23005A6BD2 /* ArrivalCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
