@@ -8,14 +8,16 @@
 
 import UIKit
 
-class BookingConfirmationViewController : UIViewController {
+class BookingConfirmationViewController : UIViewController, BookingAccumulator {
+    var runStep: ((WizardStep) -> ())?
+    
+    var bookingData: BookingData?
     
     @IBOutlet weak var summary: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let wizard = navigationController as! BookingWizardNavigationViewController
-        let tripType = wizard.tripType == 1 ? "One way trip" : "Round trip"
-        summary.text = "\(tripType) from \(wizard.departureCity) to \(wizard.arrivalCity)"
+        let tripType = bookingData!.tripType == 1 ? "One way trip" : "Round trip"
+        summary.text = "\(tripType) from \(bookingData!.departureCity) to \(bookingData!.arrivalCity)"
     }
 }

@@ -44,6 +44,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onDepartureCityUpdated:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hed-LG-XR4"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0p-sw-L7w">
                                 <rect key="frame" x="32" y="355" width="110" height="21"/>
@@ -63,10 +66,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZZ-9E-Utb">
+                                <rect key="frame" x="132" y="465.5" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.01164490638" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8lo-1M-94c" secondAttribute="trailing" constant="100" id="0LR-1k-gh8"/>
+                            <constraint firstItem="2ZZ-9E-Utb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Y8-L6-lLd"/>
                             <constraint firstItem="5V1-MK-era" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="2IK-lY-mP8"/>
                             <constraint firstItem="qEy-6d-qFO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5WC-cz-VrB"/>
                             <constraint firstItem="S0p-sw-L7w" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Dkh-e8-ped"/>
@@ -77,6 +87,7 @@
                             <constraint firstItem="cxe-xc-yRA" firstAttribute="top" secondItem="S0p-sw-L7w" secondAttribute="bottom" constant="32" id="YBf-0s-oNI"/>
                             <constraint firstItem="gl5-vz-XXo" firstAttribute="centerY" secondItem="S0p-sw-L7w" secondAttribute="centerY" id="ZLL-ii-Cvx"/>
                             <constraint firstItem="S0p-sw-L7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="cKf-OE-bRo"/>
+                            <constraint firstItem="2ZZ-9E-Utb" firstAttribute="top" secondItem="ijK-67-Szf" secondAttribute="bottom" constant="32" id="eGu-ar-KSc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cBp-Ei-PBu" secondAttribute="bottom" constant="64" id="fOZ-bp-zDu"/>
                             <constraint firstItem="cBp-Ei-PBu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gbY-uy-m7l"/>
                             <constraint firstItem="ijK-67-Szf" firstAttribute="centerY" secondItem="cxe-xc-yRA" secondAttribute="centerY" id="jlZ-ma-GgO"/>
@@ -92,6 +103,7 @@
                     <connections>
                         <outlet property="arrivalCity" destination="ijK-67-Szf" id="Rbc-1b-ycS"/>
                         <outlet property="departureCity" destination="gl5-vz-XXo" id="Ivb-Mk-Tim"/>
+                        <outlet property="errorMessage" destination="2ZZ-9E-Utb" id="QTp-Qt-XQX"/>
                         <outlet property="tripType" destination="8lo-1M-94c" id="czg-it-y8J"/>
                     </connections>
                 </viewController>
